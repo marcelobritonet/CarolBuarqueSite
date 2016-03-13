@@ -159,6 +159,10 @@
 
 /* GLOBAL */
 
+* {
+    outline: none;
+}
+
 body {
     width: 100%;
     font-size: 62.5%;
@@ -595,6 +599,10 @@ main .descritivo p {
     height: 100%;
     top:0;
     left:0;
+}
+
+.midia-page .lista-interna figcaption a img {
+    opacity: 0;
 }
 
 .midia-page .lista-interna figure:hover figcaption {
