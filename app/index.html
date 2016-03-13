@@ -2,91 +2,131 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width">
 
-  <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
-  <link rel="logo" type="image/svg" href="assets/img/logo/logo.svg">
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+    <link rel="logo" type="image/svg" href="assets/img/logo/logo.svg">
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
 
-  <title>Carol Buarque | Cake Boutique</title>
+    <title>Carol Buarque | Cake Boutique</title>
 </head>
 
 <body class="home-page">
-  <header>
+<header>
     <div class="container">
-      <h1 class="logo"><a href="#">Carol Buarque | Cake Boutique</a></h1>
-      <nav class="menu_principal clearfix">
-        <ul>
-          <li class="left"><a href="quem-somos">Quem Somos</a></li>
-          <li class="left"><a href="bolos">Bolos</a></li>
-          <li class="left"><a href="doces">Doces</a></li>
-          <li class="right"><a href="menu">Menu</a></li>
-          <li class="right"><a href="midia">Mídia</a></li>
-          <li class="right"><a href="contato">Contato</a></li>
+        <h1 class="logo"><a href="#">Carol Buarque | Cake Boutique</a></h1>
+        <nav class="menu_principal clearfix">
+            <ul>
+                <li class="quem-somos-menu left"><a href="quem_somos">Quem Somos</a></li>
+                <li class="bolos-menu left"><a href="bolos">Bolos</a></li>
+                <li class="doces-menu left"><a href="doces">Doces</a></li>
+                <li class="contato-menu right"><a href="contato">Contato</a></li>
+                <li class="midia-menu right"><a href="midia">Mídia</a></li>
+                <li class="menu-menu right"><a href="menu">Menu</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="inner">
+            <div class="citacao">"Nossos bolos e doces são criados para que sua comemoração seja uma experiência única."</div>
+            <section id="instagram" class="clearfix">
+                <h2><a href="https://www.instagram.com/carolbuarquecakeboutique/" target="_blank"> Instagram</a></h2>
+                <div class="fotos">
+                    <img width="80px" src="https://d13yacurqjgara.cloudfront.net/users/82092/screenshots/1073359/spinner.gif">
+                </div>
+            </section>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <div class="container">
+        <ul class="social-menu">
+            <li class="instagram">
+                <a href="#"></a>
+            </li>
+            <li class="facebook">
+                <a href="#"></a>
+            </li>
+            <li class="contato">
+                <a href="#"></a>
+            </li>
+            <li class="tel">
+                <a href="#">(11) 3887 2778</a>
+            </li>
         </ul>
-      </nav>
     </div>
-  </header>
+</footer>
 
-  <main>
-    <div class="container">
-      <quote>"Nossos bolos e doces são criados para que sua comemoração seja uma experiência única."</quote>
-    </div>
+<!-- Scripts -->
+<script src="lib/jquery.min.js"></script>
+<script src="lib/underscore-1.4.4.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="js/app.js"></script>
 
-    <section>
-      <ul>
-        <li>
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="" alt=""></a>
-        </li>
-      </ul>
-    </section>
 
-  </main>
-  <footer>
-    <div class="container">
-      <ul class="social-menu">
-        <li class="instagram">
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li class="facebook">
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li class="contato">
-          <a href="#"><img src="" alt=""></a>
-        </li>
-        <li class="tel">(11) 3887 2778</li>
-      </ul>
-    </div>
-  </footer>
+<script>
+    var accessToken = '47452668.1677ed0.6b14653feb1d4da9849c4f53391aeef1';
+    var username = "carolbuarquecakeboutique";
+    var limit = 7;
+    var setSize = "small";
 
-  <!-- Scripts -->
-  <script src="lib/jquery.min.js"></script>
-  <script src="lib/underscore-1.4.4.min.js"></script>
-  <script src="lib/angular/angular.min.js"></script>
-  <script src="lib/angular/angular-sanitize.js"></script>
-  <script src="js/app.js"></script>
+    var instagram = function() {
+        return {
+            init: function() {
+                instagram.getUser();
+            },
+            getUser: function() {
+                var getUserURL = 'https://api.instagram.com/v1/users/search?q=' + username + '&access_token=' + accessToken + '';
+                $.ajax({
+                    type: "GET",
+                    dataType: "jsonp",
+                    cache: false,
+                    url: getUserURL,
+                    success: function(data) {
+                        var getUserID = data.data[0].id;
+                        instagram.loadImages(getUserID);
+                    }
+                });
+            },
+            loadImages: function(userID) {
+                var getImagesURL = 'https://api.instagram.com/v1/users/' + userID + '/media/recent/?access_token=' + accessToken + '';
+                $.ajax({
+                    type: "GET",
+                    dataType: "jsonp",
+                    cache: false,
+                    url: getImagesURL,
+                    success: function(data) {
+                        var photosList = '';
+                        for (var i = 0; i < limit; i += 1) {
+                            if (setSize == "small") {
+                                var size = data.data[i].images.thumbnail.url;
+                            } else if (setSize == "medium") {
+                                var size = data.data[i].images.low_resolution.url;
+                            } else {
+                                var size = data.data[i].images.standard_resolution.url;
+                            }
+                            photosList = photosList + "<li><a target='_blank' href='" + data.data[i].link + "'><img src='" + size + "'></img></a></li>";
+                        }
+                        $("#instagram .fotos").html(photosList);
+                    }
+                });
+            }
+        }
+    }();
+
+    $(document).ready(function() {
+        instagram.init();
+    });
+</script>
 </body>
 
 </html>

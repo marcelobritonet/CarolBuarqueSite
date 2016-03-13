@@ -1,11 +1,158 @@
 @charset "utf-8";
 
 /* FONT FACE */
+@font-face {
+    font-family: 'vogamedium';
+    src: url('font/voga-medium-webfont.eot');
+    src: url('font/voga-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('font/voga-medium-webfont.woff2') format('woff2'),
+    url('font/voga-medium-webfont.woff') format('woff'),
+    url('font/voga-medium-webfont.ttf') format('truetype'),
+    url('font/voga-medium-webfont.svg#vogamedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
-    font-family: 'museosans300';
-    src: url('fontes/museosans-300-webfont.eot');
-    src: url('fontes/museosans-300-webfont.eot?#iefix') format('embedded-opentype'), url('fontes/museosans-300-webfont.woff2') format('woff2'), url('fontes/museosans-300-webfont.woff') format('woff'), url('fontes/museosans-300-webfont.ttf') format('truetype'), url('fontes/museosans-300-webfont.svg#museo_sans300') format('svg');
+    font-family: 'Avenir-Black';
+    src: url('font/Avenir-Black.eot');
+    src: url('font/Avenir-Black.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-Black.woff2') format('woff2'),
+    url('font/Avenir-Black.woff') format('woff'),
+    url('font/Avenir-Black.ttf') format('truetype'),
+    url('font/Avenir-Black.svg#Avenir-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-BlackOblique';
+    src: url('font/Avenir-BlackOblique.eot');
+    src: url('font/Avenir-BlackOblique.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-BlackOblique.woff2') format('woff2'),
+    url('font/Avenir-BlackOblique.woff') format('woff'),
+    url('font/Avenir-BlackOblique.ttf') format('truetype'),
+    url('font/Avenir-BlackOblique.svg#Avenir-BlackOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('font/Avenir-Book.eot');
+    src: url('font/Avenir-Book.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-Book.woff2') format('woff2'),
+    url('font/Avenir-Book.woff') format('woff'),
+    url('font/Avenir-Book.ttf') format('truetype'),
+    url('font/Avenir-Book.svg#Avenir-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-BookOblique';
+    src: url('font/Avenir-BookOblique.eot');
+    src: url('font/Avenir-BookOblique.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-BookOblique.woff2') format('woff2'),
+    url('font/Avenir-BookOblique.woff') format('woff'),
+    url('font/Avenir-BookOblique.ttf') format('truetype'),
+    url('font/Avenir-BookOblique.svg#Avenir-BookOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Heavy';
+    src: url('font/Avenir-Heavy.eot');
+    src: url('font/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-Heavy.woff2') format('woff2'),
+    url('font/Avenir-Heavy.woff') format('woff'),
+    url('font/Avenir-Heavy.ttf') format('truetype'),
+    url('font/Avenir-Heavy.svg#Avenir-Heavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-HeavyOblique';
+    src: url('font/Avenir-HeavyOblique.eot');
+    src: url('font/Avenir-HeavyOblique.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-HeavyOblique.woff2') format('woff2'),
+    url('font/Avenir-HeavyOblique.woff') format('woff'),
+    url('font/Avenir-HeavyOblique.ttf') format('truetype'),
+    url('font/Avenir-HeavyOblique.svg#Avenir-HeavyOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Light';
+    src: url('font/Avenir-Light.eot');
+    src: url('font/Avenir-Light.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-Light.woff2') format('woff2'),
+    url('font/Avenir-Light.woff') format('woff'),
+    url('font/Avenir-Light.ttf') format('truetype'),
+    url('font/Avenir-Light.svg#Avenir-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-LightOblique';
+    src: url('font/Avenir-LightOblique.eot');
+    src: url('font/Avenir-LightOblique.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-LightOblique.woff2') format('woff2'),
+    url('font/Avenir-LightOblique.woff') format('woff'),
+    url('font/Avenir-LightOblique.ttf') format('truetype'),
+    url('font/Avenir-LightOblique.svg#Avenir-LightOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Medium';
+    src: url('font/Avenir-Medium.eot');
+    src: url('font/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-Medium.woff2') format('woff2'),
+    url('font/Avenir-Medium.woff') format('woff'),
+    url('font/Avenir-Medium.ttf') format('truetype'),
+    url('font/Avenir-Medium.svg#Avenir-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-MediumOblique';
+    src: url('font/Avenir-MediumOblique.eot');
+    src: url('font/Avenir-MediumOblique.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-MediumOblique.woff2') format('woff2'),
+    url('font/Avenir-MediumOblique.woff') format('woff'),
+    url('font/Avenir-MediumOblique.ttf') format('truetype'),
+    url('font/Avenir-MediumOblique.svg#Avenir-MediumOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Oblique';
+    src: url('font/Avenir-Oblique.eot');
+    src: url('font/Avenir-Oblique.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-Oblique.woff2') format('woff2'),
+    url('font/Avenir-Oblique.woff') format('woff'),
+    url('font/Avenir-Oblique.ttf') format('truetype'),
+    url('font/Avenir-Oblique.svg#Avenir-Oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('font/Avenir-Roman.eot');
+    src: url('font/Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+    url('font/Avenir-Roman.woff2') format('woff2'),
+    url('font/Avenir-Roman.woff') format('woff'),
+    url('font/Avenir-Roman.ttf') format('truetype'),
+    url('font/Avenir-Roman.svg#Avenir-Roman') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,7 +164,11 @@ body {
     font-size: 62.5%;
     color: #86754d;
     background: #fff;
-    font-family: Arial;
+    font-family: 'Avenir-Light';
+}
+
+p {
+    margin-bottom: 20px;
 }
 
 a {
@@ -45,6 +196,17 @@ header .container {
 main .container {
     border-left: 1px solid #86754d;
     border-right: 1px solid #86754d;
+    height: 100%;
+}
+
+main .container .inner {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+main .container .conteudo {
+    width: 50%;
 }
 
 footer .container {
@@ -71,96 +233,473 @@ footer .container {
     overflow: hidden;
 }
 
+/* MENU PRINCIPAL */
 .menu_principal {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     top: 10px;
     position: relative;
+    height: 57px;
 }
 
 .menu_principal ul {
     background: #fff;
-    text-align: center;
     float: left;
     width: 100%;
 }
 
 .menu_principal ul li {
-    background: #fff;
-    display: block;
-    padding: 10px;
-
+    text-align: center;
 }
 
 .menu_principal ul li a {
+    font-family: 'Avenir-Light';
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 17px;
+    display: block;
+    padding: 15px 0;
+    width: 125px;
+    border-bottom: 1px solid #fff;
 }
 
 .menu_principal ul li.left {
-    float: left;
+float: left;
+margin-left: 20px;
 }
 
 .menu_principal ul li.right {
-    float: right;
+float: right;
+margin-right: 20px;
+}
+
+.quem-somos-page .menu_principal ul li.quem-somos-menu a {
+    border-bottom-color: #86754d;
+    font-family: 'Avenir-Black';
+}
+
+.bolos-page .menu_principal ul li.bolos-menu a {
+    border-bottom-color: #86754d;
+    font-family: 'Avenir-Black';
+}
+
+.doces-page .menu_principal ul li.doces-menu a {
+    border-bottom-color: #86754d;
+    font-family: 'Avenir-Black';
+}
+
+.contato-page .menu_principal ul li.contato-menu a {
+    border-bottom-color: #86754d;
+    font-family: 'Avenir-Black';
+}
+
+.midia-page .menu_principal ul li.midia-menu a {
+    border-bottom-color: #86754d;
+    font-family: 'Avenir-Black';
+}
+
+.menu-page .menu_principal ul li.menu-menu a {
+    border-bottom-color: #86754d;
+    font-family: 'Avenir-Black';
+}
+
+/* MENU INTERNO */
+.menu-interno {
+    text-align: center;
+}
+
+.menu-interno li {
+    width: 17%;
+    margin: 0 17px;
+    display: inline-block;
+}
+
+.menu-interno li:first-child {
+    margin-left: 0;
+}
+
+.menu-interno li:last-child {
+    margin-right: 0;
+}
+
+.menu-interno h2 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+}
+
+.menu-interno img {
+    border: 1px solid #86754d;
+    padding: 3px;
+    width: 165px;
+    margin-bottom: 34px;
+}
+
+/* MENU INTERNO BOLOS */
+.casamento-page .menu-interno .casamento-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.infantil-feminino-page .menu-interno .infantil-feminino-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.infantil-masculino-page .menu-interno .infantil-masculino-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.religiosos-page .menu-interno .religiosos-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.comemoracoes-diversas-page .menu-interno .comemoracoes-diversas-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+/* MENU INTERNO DOCES */
+.pirulitos-page .menu-interno .pirulitos-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.cupcake-page .menu-interno .cupcake-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.doces-decorados-page .menu-interno .doces-decorados-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.cakepop-page .menu-interno .cakepop-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.minibolos-page .menu-interno .minibolos-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+/* LISTA INTERNA */
+.lista-interna {
+}
+
+.lista-interna li {
+    width: 17%;
+    margin: 0 17px 40px;
+    display: inline-block;
+}
+
+.lista-interna li:first-child {
+    margin-left: 0;
+}
+
+.lista-interna li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.lista-interna li:nth-child(5n+6) {
+    margin-left: 0;
+}
+
+.lista-interna img {
+    border: 1px solid #86754d;
+    padding: 3px;
+    width: 165px;
 }
 
 /* MAIN */
-.home-page main {
+main {
     position: relative;
-    height: 800px;
+}
+
+main:after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    right: 26px;
+    bottom: 0px;
+    z-index: -1;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+main:before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 25px;
+    bottom: 0px;
+    z-index: -1;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+main .descritivo {
+    margin-bottom: 30px;
+}
+
+main .descritivo h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: 'Avenir-Black';
+}
+
+main .descritivo h3:after {
+    content: '◀';
+    font-size: 1.6em;
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+}
+
+main .descritivo p {
+    font-size: 1.1em;
+    text-transform: uppercase;
+
+}
+
+/* INSTAGRAM BOX */
+#instagram {
+    width: 290px;
+}
+
+#instagram h2 {
+    font-family: 'Avenir-Light';
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#instagram li {
+    list-style-type: none;
+}
+
+#instagram li img {
+    float: left;
+    max-width: 45px;
+    border: 1px solid #86754d;
+    padding: 3px;
+    margin: 2px;
+}
+
+#instagram li:first-of-type img {
+    max-width: 102px;
+}
+
+/* HOME PAGE */
+.home-page main {
+    height: 700px;
 }
 
 .home-page main:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url("../img/bg-bolo.jpg") bottom right no-repeat;
+    background-image: url("../img/bg-bolo.jpg");
 }
 
 .home-page main:before {
-    content: '';
+    background-image: url("../img/bg-floral.jpg");
+}
+
+.home-page .citacao {
+    font-size: 40px;
+    width: 45%;
+    line-height: 50px;
+    letter-spacing: -1px;
+    margin-bottom: 50px;
+}
+
+/* QUEM SOMOS */
+.quem-somos-page main:after {
+    background-image: url("../img/bg-quem-somos.jpg");
+}
+
+.quem-somos-page main:before {
+    background-image: url("../img/bg-quem-somos-floral.jpg");
+}
+
+.quem-somos-page main .container .conteudo {
+    font-size: 1.5em;
+    line-height: 1.53em;
+    height: 500px;
+    font-family: 'Avenir-Roman';
+}
+
+/* BOLOS */
+.bolos-page main:before {
+    background-image: url("../img/bg-bolos-floral.jpg");
+}
+
+.bolos-page main .container .conteudo {
+    float: right;
+    width: 37%;
+    text-align: right;
+}
+
+.bolos-page .citacao {
+    font-size: 24px;
+    line-height: 37px;
+    margin-bottom: 40px;
+}
+
+/* DOCES */
+.doces-page main:before {
+    background-image: url("../img/bg-doces.jpg");
+}
+
+.doces-page main .container .conteudo {
+    float: right;
+    width: 37%;
+    text-align: right;
+}
+
+.doces-page .citacao {
+    font-size: 24px;
+    line-height: 37px;
+    margin-bottom: 40px;
+}
+
+/* MIDIA */
+.midia-page main:after {
+    background-image: url("../img/bg-midia-floral.jpg");
+}
+
+.midia-page .lista-interna figure {
+    position: relative;
+}
+
+.midia-page .lista-interna figcaption {
+    display: table;
+    opacity: 0;
     position: absolute;
     width: 100%;
+    height: 250px;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: #86754d;
+    transition: opacity 1s ease;
+}
+
+.midia-page .lista-interna figcaption p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.midia-page .lista-interna figcaption a {
+    display: block;
+    position: absolute;
+    width:100%;
     height: 100%;
-    background: url("../img/bg-floral.jpg") bottom left no-repeat;
+    top:0;
+    left:0;
+}
+
+.midia-page .lista-interna figure:hover figcaption {
+    opacity: 1;
+    transition: opacity .2s ease;
+}
+
+/* CONTATO */
+.contato-page main .container .conteudo {
+    width: 100%;
+    height: 500px;
+}
+
+.contato-page main:before {
+    background-image: url("../img/bg-contato-doces.jpg");
+}
+
+.contato-page main:after {
+    background-image: url("../img/bg-contato-floral.JPG");
+}
+
+.contato-page .mapa {
+    float: left;
+}
+
+.contato-page .mapa img {
+    border: 1px solid #86754d;
+    padding: 3px;
+}
+
+.contato-page .citacao {
+    float: right;
+    text-align: right;
+    font-size: 35px;
+    line-height: 44px;
+    margin-bottom: 40px;
+    width: 30%;
+}
+
+.contato-page address {
+    float: right;
+    font-size: 19px;
+    line-height: 24px;
+    padding: 15px 0;
 }
 
 /* FOOTER */
 .social-menu {
     margin: 0 auto;
-    width: 175px;
-    height: 15px;
+    width: 195px;
+    height: 0;
     border-left: 1px solid #86754d;
     border-top: 1px solid #86754d;
     border-right: 1px solid #86754d;
-    top: -26px;
+    top: -17px;
     position: relative;
     background: #fff;
-    padding: 5px;
+    padding: 8px;
 }
 
 .social-menu li {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+    display: block;
+    float: left;
+    margin: 0 3px;
     background: url("../img/social-icons.jpg") no-repeat;
 }
+
+.social-menu li a {
+    display: block;
+    height: 20px;
+}
+
 .social-menu li.instagram {
     background-position: 0px 0px;
+}
+
+.social-menu li.instagram a {
+    width: 20px;
 }
 
 .social-menu li.facebook {
     background-position: -21px 0px;
 }
 
+.social-menu li.facebook a {
+    width: 20px;
+}
+
 .social-menu li.contato {
-    width: 28px;
     background-position: -43px 0px;
 }
 
+.social-menu li.contato a {
+    width: 28px;
+}
+
 .social-menu li.tel {
-    width: 80px;
     background: none;
+    float: right;
+    text-align: center;
+    font-family: 'Avenir-Heavy';
+}
+
+.social-menu li.tel a {
+    width: 100px;
+    line-height: 19px;
+    font-size: 1.3em;
 }
