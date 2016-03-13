@@ -696,9 +696,6 @@ main .descritivo p {
     float: right;
     text-align: center;
     font-family: 'Avenir-Heavy';
-}
-
-.social-menu li.tel a {
     width: 100px;
     line-height: 19px;
     font-size: 1.3em;
