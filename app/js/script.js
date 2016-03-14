@@ -23,9 +23,6 @@ $(document).ready(function () {
         },
         image: {
             tError: '<a href="%url%">A imagem</a> não pôde ser carregada.'
-        },
-        ajax: {
-            tError: '<a href="%url%">O conteúdo</a> não pôde ser carregado.'
         }
     };
     $('.lista-interna').magnificPopup(magnificPopupSettings);
@@ -41,7 +38,19 @@ $(document).ready(function () {
             // settings: {cache:false, async:false}
 
             cursor: 'mfp-ajax-cur', // CSS class that will be added to body during the loading (adds "progress" cursor)
-            tError: '<a href="%url%">The content</a> could not be loaded.' //  Error message, can contain %curr% and %total% tags if gallery is enabled
-        }
+            tError: '<a href="%url%">O conteúdo</a> não pôde ser carregado.'
+        },
+        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+        zoom: {
+            enabled: true, // By default it's false, so don't forget to enable it
+
+            duration: 300, // duration of the effect, in milliseconds
+            easing: 'ease-in-out', // CSS transition easing function
+            opener: function (openerElement) {
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+        },
+        tClose: 'Fechar (tecla Esc)',
+        tLoading: 'Carregando...',
     });
 });
