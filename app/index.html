@@ -17,8 +17,8 @@
     <meta property="og:image:height" content="600">
     <meta property="og:type" content="website">
 
-    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
-    <link rel="logo" type="image/svg" href="assets/img/logo/logo.svg">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="logo" type="image/svg" href="img/logo.svg">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/app.css">
@@ -30,7 +30,7 @@
 <header>
     <div class="container">
         <h1 class="logo">
-            <a href="../">
+            <a href="">
                 <img src="../img/logo.jpg" alt="">
                 Carol Buarque | Cake Boutique
             </a>
@@ -120,6 +120,7 @@
                     url: getImagesURL,
                     success: function(data) {
                         var photosList = '';
+
                         for (var i = 0; i < limit; i += 1) {
                             if (setSize == "small") {
                                 var size = data.data[i].images.thumbnail.url;

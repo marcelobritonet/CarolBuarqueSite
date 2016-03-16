@@ -210,17 +210,19 @@ header .container {
 main .container {
     border-left: 1px solid #86754d;
     border-right: 1px solid #86754d;
+    min-height: 690px;
     height: 100%;
 }
 
 main .container .inner {
     width: 80%;
+    max-width: 990px;
     margin: 0 auto;
     padding-top: 80px;
 }
 
 main .container .conteudo {
-    width: 50%;
+    width: 50%;  
 }
 
 footer .container {
@@ -232,16 +234,16 @@ footer .container {
     text-align: center;
     position: absolute;
     left: 50%;
-    width: 200px;
-    margin-left: -100px;
+    width: 265px;
+    margin-left: -133px;
     z-index: 1;
 }
 
 .logo a {
     background: url("../img/logo.jpg") center center no-repeat;
     display: block;
-    width: 200px;
-    height: 64px;
+    width: 100%;
+    height: 100px;
     color: #fff;
     text-indent: -9999px;
     overflow: hidden;
@@ -249,6 +251,7 @@ footer .container {
 
 /* MENU PRINCIPAL */
 .menu_principal {
+    max-width: 1190px;
     width: 85%;
     margin: 0 auto;
     top: 10px;
@@ -272,47 +275,47 @@ footer .container {
     font-size: 17px;
     display: block;
     padding: 15px 0;
-    width: 125px;
+    width: 120px;
     border-bottom: 1px solid #fff;
 }
 
 .menu_principal ul li.left {
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .menu_principal ul li.right {
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
+/* FIO INFERIOR NO MENU ATIVO */
 .quem-somos-page .menu_principal ul li.quem-somos-menu a {
-    border-bottom-color: #86754d;
+    /*border-bottom-color: #86754d;*/
     font-family: 'Avenir-Black';
 }
 
 .bolos-page .menu_principal ul li.bolos-menu a {
-    border-bottom-color: #86754d;
+    /*border-bottom-color: #86754d;*/
     font-family: 'Avenir-Black';
 }
 
 .doces-page .menu_principal ul li.doces-menu a {
-    border-bottom-color: #86754d;
+    /*border-bottom-color: #86754d;*/
     font-family: 'Avenir-Black';
 }
 
 .contato-page .menu_principal ul li.contato-menu a {
-    border-bottom-color: #86754d;
+    /*border-bottom-color: #86754d;*/
     font-family: 'Avenir-Black';
 }
 
 .midia-page .menu_principal ul li.midia-menu a {
-    border-bottom-color: #86754d;
+    /*border-bottom-color: #86754d;*/
     font-family: 'Avenir-Black';
 }
 
 .menu-page .menu_principal ul li.menu-menu a {
-    border-bottom-color: #86754d;
     font-family: 'Avenir-Black';
 }
 
@@ -475,7 +478,8 @@ main .descritivo p {
 
 /* INSTAGRAM BOX */
 #instagram {
-    width: 290px;
+    width: 100%;
+    max-width: 415px;
 }
 
 #instagram h2 {
@@ -491,14 +495,14 @@ main .descritivo p {
 
 #instagram li img {
     float: left;
-    max-width: 45px;
+    max-width: 69px;
     border: 1px solid #86754d;
     padding: 3px;
     margin: 2px;
 }
 
 #instagram li:first-of-type img {
-    max-width: 102px;
+    max-width: 150px;
 }
 
 /* HOME PAGE */
@@ -534,7 +538,6 @@ main .descritivo p {
 .quem-somos-page main .container .conteudo {
     font-size: 1.5em;
     line-height: 1.53em;
-    height: 500px;
     font-family: 'Avenir-Roman';
 }
 
@@ -605,7 +608,8 @@ main .descritivo p {
 
 .popup-box .popup-box-conteudo .lista li {
     text-transform: uppercase;
-    margin-bottom: 5px;
+    line-height: 17px;
+    margin-bottom: 12px;
 }
 
 .popup-box .popup-box-conteudo .lista li ul {
@@ -617,6 +621,8 @@ main .descritivo p {
     text-transform: none;
     list-style-type: disc;
     list-style-position: inside;
+    margin-bottom: 4px;
+    line-height: 15px;
 }
 
 /* DOCES */
@@ -637,11 +643,25 @@ main .descritivo p {
 }
 
 .doces-page .mfp-content {
-    width: 80%;
+    max-width: 990px;
 }
 
 .doces-page .popup-box .popup-box-titulo .lowercase {
     text-transform: lowercase;
+}
+
+/* MENU DE DOCES */
+.doces-page .popup-box .popup-box-conteudo .lista {
+    width: 25%;
+    margin: 0 5%;
+}
+
+.doces-page .popup-box .popup-box-conteudo .lista:first-of-type {
+    margin-left: 0;
+}
+
+.doces-page .popup-box .popup-box-conteudo .lista:last-of-type {
+    margin-right: 0;
 }
 
 /* MIDIA */
@@ -695,7 +715,6 @@ main .descritivo p {
 /* CONTATO */
 .contato-page main .container .conteudo {
     width: 100%;
-    height: 500px;
 }
 
 .contato-page main:before {
@@ -734,7 +753,7 @@ main .descritivo p {
 /* FOOTER */
 .social-menu {
     margin: 0 auto;
-    width: 195px;
+    width: 225px;
     height: 0;
     border-left: 1px solid #86754d;
     border-top: 1px solid #86754d;
@@ -754,7 +773,7 @@ main .descritivo p {
 
 .social-menu li a {
     display: block;
-    height: 20px;
+    height: 30px;
 }
 
 .social-menu li.instagram {
@@ -762,23 +781,23 @@ main .descritivo p {
 }
 
 .social-menu li.instagram a {
-    width: 20px;
+    width: 30px;
 }
 
 .social-menu li.facebook {
-    background-position: -21px 0px;
+    background-position: -32px 0px;
 }
 
 .social-menu li.facebook a {
-    width: 20px;
+    width: 30px;
 }
 
 .social-menu li.contato {
-    background-position: -43px 0px;
+    background-position: -65px 0px;
 }
 
 .social-menu li.contato a {
-    width: 28px;
+    width: 40px;
 }
 
 .social-menu li.tel {
@@ -787,6 +806,6 @@ main .descritivo p {
     text-align: center;
     font-family: 'Avenir-Heavy';
     width: 100px;
-    line-height: 19px;
-    font-size: 1.3em;
+    line-height: 27px;
+    font-size: 13px;
 }
