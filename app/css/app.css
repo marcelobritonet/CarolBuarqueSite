@@ -178,6 +178,7 @@ body {
     font-size: 62.5%;
     color: #86754d;
     background: #fff;
+    min-width: 1300px;
     font-family: 'Avenir-Light';
 }
 
