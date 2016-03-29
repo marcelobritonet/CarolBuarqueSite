@@ -399,9 +399,11 @@ footer .container {
 }
 
 .lista-interna li {
-    width: 17%;
+    width: 16%;
     margin: 0 17px 40px;
     display: inline-block;
+    border: 1px solid #86754d;
+    padding: 3px;
 }
 
 .lista-interna li:first-child {
@@ -417,9 +419,7 @@ footer .container {
 }
 
 .lista-interna img {
-    border: 1px solid #86754d;
-    padding: 3px;
-    width: 165px;
+    width: 100%;
 }
 
 /* MAIN */
@@ -679,7 +679,7 @@ main .descritivo p {
     opacity: 0;
     position: absolute;
     width: 100%;
-    height: 250px;
+    height: 230px;
     top: 0;
     left: 0;
     color: #fff;
