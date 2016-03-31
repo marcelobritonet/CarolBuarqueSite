@@ -1,4 +1,55 @@
 $(document).ready(function () {
+
+    var accessToken = '47452668.1677ed0.6b14653feb1d4da9849c4f53391aeef1';
+    var username = "carolbuarquecakeboutique";
+    var limit = 7;
+    var setSize = "small";
+
+    instagram = function () {
+        return {
+            init: function () {
+                instagram.getUser();
+            },
+            getUser: function () {
+                var getUserURL = 'https://api.instagram.com/v1/users/search?q=' + username + '&access_token=' + accessToken + '';
+                $.ajax({
+                    type: "GET",
+                    dataType: "jsonp",
+                    cache: false,
+                    url: getUserURL,
+                    success: function (data) {
+                        var getUserID = data.data[0].id;
+                        instagram.loadImages(getUserID);
+                    }
+                });
+            },
+            loadImages: function (userID) {
+                var getImagesURL = 'https://api.instagram.com/v1/users/' + userID + '/media/recent/?access_token=' + accessToken + '';
+                $.ajax({
+                    type: "GET",
+                    dataType: "jsonp",
+                    cache: false,
+                    url: getImagesURL,
+                    success: function (data) {
+                        var photosList = '';
+
+                        for (var i = 0; i < limit; i += 1) {
+                            if (setSize == "small") {
+                                var size = data.data[i].images.thumbnail.url;
+                            } else if (setSize == "medium") {
+                                var size = data.data[i].images.low_resolution.url;
+                            } else {
+                                var size = data.data[i].images.standard_resolution.url;
+                            }
+                            photosList = photosList + "<li><a target='_blank' href='" + data.data[i].link + "'><img src='" + size + "'></img></a></li>";
+                        }
+                        $("#instagram .fotos").html(photosList);
+                    }
+                });
+            }
+        }
+    }();
+
     /* magnificPopup global options */
     var magnificPopupSettings = {
         delegate: 'a', // child items selector, by clicking on it popup will open
@@ -25,10 +76,13 @@ $(document).ready(function () {
             tError: '<a href="%url%">A imagem</a> não pôde ser carregada.'
         }
     };
-    $('.lista-interna').magnificPopup(magnificPopupSettings);
+
+    if ($('.lista-interna')) $('.lista-interna').magnificPopup(magnificPopupSettings);
+
 
     magnificPopupSettings.type = 'iframe';
-    $('.contato-page .mapa').magnificPopup(magnificPopupSettings);
+
+    if ($('.contato-page .mapa')) $('.contato-page .mapa').magnificPopup(magnificPopupSettings);
 
     $('.popup').magnificPopup({
         type: 'ajax',

@@ -10,7 +10,8 @@
     <meta property="og:url" content="http://codeglue.com.br/carolbuarque/">
     <meta property="og:title" content="Carol Buarque">
     <meta property="og:site_name" content="Carol Buarque | Cake Boutique">
-    <meta property="og:description" content="Nossos bolos e doces são criados para que sua comemoração seja uma experiência única.">
+    <meta property="og:description"
+          content="Nossos bolos e doces são criados para que sua comemoração seja uma experiência única.">
     <meta property="og:image" content="http://codeglue.com.br/carolbuarque/img/logo.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
@@ -51,11 +52,14 @@
 <main>
     <div class="container">
         <div class="inner">
-            <div class="citacao">"Nossos bolos e doces são criados para que sua comemoração seja uma experiência única."</div>
+            <div class="citacao">"Nossos bolos e doces são criados para que sua comemoração seja uma experiência
+                única."
+            </div>
             <section id="instagram" class="clearfix">
                 <h2><a href="https://www.instagram.com/carolbuarquecakeboutique/" target="_blank"> Instagram</a></h2>
                 <div class="fotos">
-                    <img width="80px" src="https://d13yacurqjgara.cloudfront.net/users/82092/screenshots/1073359/spinner.gif">
+                    <img width="80px"
+                         src="https://d13yacurqjgara.cloudfront.net/users/82092/screenshots/1073359/spinner.gif">
                 </div>
             </section>
         </div>
@@ -84,61 +88,13 @@
 <script src="lib/underscore-1.4.4.min.js"></script>
 <script src="lib/angular/angular.min.js"></script>
 <script src="lib/angular/angular-sanitize.js"></script>
+<script src="lib/jquery.magnific-popup.min.js"></script>
 <script src="js/app.js"></script>
+<script src="js/script.js"></script>
 
 
 <script>
-    var accessToken = '47452668.1677ed0.6b14653feb1d4da9849c4f53391aeef1';
-    var username = "carolbuarquecakeboutique";
-    var limit = 7;
-    var setSize = "small";
-
-    var instagram = function() {
-        return {
-            init: function() {
-                instagram.getUser();
-            },
-            getUser: function() {
-                var getUserURL = 'https://api.instagram.com/v1/users/search?q=' + username + '&access_token=' + accessToken + '';
-                $.ajax({
-                    type: "GET",
-                    dataType: "jsonp",
-                    cache: false,
-                    url: getUserURL,
-                    success: function(data) {
-                        var getUserID = data.data[0].id;
-                        instagram.loadImages(getUserID);
-                    }
-                });
-            },
-            loadImages: function(userID) {
-                var getImagesURL = 'https://api.instagram.com/v1/users/' + userID + '/media/recent/?access_token=' + accessToken + '';
-                $.ajax({
-                    type: "GET",
-                    dataType: "jsonp",
-                    cache: false,
-                    url: getImagesURL,
-                    success: function(data) {
-                        var photosList = '';
-
-                        for (var i = 0; i < limit; i += 1) {
-                            if (setSize == "small") {
-                                var size = data.data[i].images.thumbnail.url;
-                            } else if (setSize == "medium") {
-                                var size = data.data[i].images.low_resolution.url;
-                            } else {
-                                var size = data.data[i].images.standard_resolution.url;
-                            }
-                            photosList = photosList + "<li><a target='_blank' href='" + data.data[i].link + "'><img src='" + size + "'></img></a></li>";
-                        }
-                        $("#instagram .fotos").html(photosList);
-                    }
-                });
-            }
-        }
-    }();
-
-    $(document).ready(function() {
+    $(document).ready(function () {
         instagram.init();
     });
 </script>
