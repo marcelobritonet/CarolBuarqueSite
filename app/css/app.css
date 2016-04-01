@@ -223,7 +223,7 @@ main .container .inner {
 }
 
 main .container .conteudo {
-    width: 50%;  
+    width: 50%;
 }
 
 footer .container {
@@ -753,6 +753,13 @@ main .descritivo p {
 }
 
 /* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
 .social-menu {
     margin: 0 auto;
     width: 225px;
