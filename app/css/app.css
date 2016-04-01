@@ -540,6 +540,15 @@ main .descritivo p {
     background-image: url("../img/bg-bolos-floral.jpg");
 }
 
+.bolos-page.casamento-page main:before,
+.bolos-page.infantil-feminino-page main:before,
+.bolos-page.infantil-masculino-page main:before,
+.bolos-page.religiosos-page main:before,
+.bolos-page.comemoracoes-diversas-page main:before
+{
+    background-image: none;
+}
+
 .bolos-page main .container .conteudo {
     float: right;
     width: 37%;
