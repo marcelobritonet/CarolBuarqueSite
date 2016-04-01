@@ -424,10 +424,6 @@ footer .container {
 }
 
 /* MAIN */
-main {
-    position: relative;
-}
-
 main:after {
     content: '';
     position: absolute;
@@ -508,10 +504,6 @@ main .descritivo p {
 }
 
 /* HOME PAGE */
-.home-page main {
-    height: 700px;
-}
-
 .home-page main:after {
     background-image: url("../img/bg-bolo.jpg");
 }
@@ -755,7 +747,7 @@ main .descritivo p {
 /* FOOTER */
 footer {
     position: fixed;
-    bottom: 0;
+    bottom: -5px;
     width: 100%;
     background: #fff;
 }

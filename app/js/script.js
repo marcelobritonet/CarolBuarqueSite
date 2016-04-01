@@ -1,5 +1,34 @@
 $(document).ready(function () {
 
+
+
+    (function ($) {
+        $.fn.fullHeight = function (options) {
+            //    var settings = $.extend({}, options);
+
+            var obj = this;
+            var firstTime = 0;
+            x = $(obj).minHeight;
+            minHeightBase = $(obj).css('min-height').split('px')[0];
+
+            $(window).resize(function () {
+                if ($(this).height() >= minHeightBase) {
+                    $(obj).css('min-height', $(this).height()).parent().css('position', 'initial');
+                } else {
+                    $(obj).css('min-height', minHeightBase).parent().css('position', 'relative');
+                };
+            });
+
+            if (!firstTime) {
+                $(window).resize();
+                obj.css('opacity', 1);
+                firstTime = 1;
+            };
+        };
+    }(jQuery));
+
+    $('main .container').fullHeight();
+
     var accessToken = '47452668.1677ed0.6b14653feb1d4da9849c4f53391aeef1';
     var username = "carolbuarquecakeboutique";
     var limit = 7;
