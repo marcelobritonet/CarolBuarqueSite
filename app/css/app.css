@@ -562,13 +562,17 @@ main .descritivo p {
 }
 
 .bolos-page .mfp-content {
-    max-width: 700px;
+    /*max-width: 700px;*/
 }
 
 /* DESCRITIVO POPUP BOX */
 .mfp-content .mfp-close {
     color: #fff;
     font-family: 'Avenir-Light';
+}
+
+.mfp-content {
+    max-width: 990px;
 }
 
 .popup-box {
@@ -625,7 +629,24 @@ main .descritivo p {
     list-style-type: disc;
     list-style-position: inside;
     margin-bottom: 4px;
-    line-height: 15px;
+    line-height: 18px;
+}
+
+.popup-box .popup-box-titulo .lowercase {
+    text-transform: lowercase;
+}
+
+.popup-box .popup-box-conteudo .lista {
+    width: 25%;
+    margin: 0 5%;
+}
+
+.popup-box .popup-box-conteudo .lista:first-of-type {
+    margin-left: 0;
+}
+
+.popup-box .popup-box-conteudo .lista:last-of-type {
+    margin-right: 0;
 }
 
 /* DOCES */
@@ -643,28 +664,6 @@ main .descritivo p {
     font-size: 24px;
     line-height: 37px;
     margin-bottom: 40px;
-}
-
-.doces-page .mfp-content {
-    max-width: 990px;
-}
-
-.doces-page .popup-box .popup-box-titulo .lowercase {
-    text-transform: lowercase;
-}
-
-/* MENU DE DOCES */
-.doces-page .popup-box .popup-box-conteudo .lista {
-    width: 25%;
-    margin: 0 5%;
-}
-
-.doces-page .popup-box .popup-box-conteudo .lista:first-of-type {
-    margin-left: 0;
-}
-
-.doces-page .popup-box .popup-box-conteudo .lista:last-of-type {
-    margin-right: 0;
 }
 
 /* MIDIA */
