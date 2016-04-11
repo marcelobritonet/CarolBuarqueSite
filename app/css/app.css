@@ -326,6 +326,7 @@ footer .container {
 }
 
 .menu-interno li {
+    position: relative;
     width: 17%;
     margin: 0 17px;
     display: inline-block;
@@ -352,8 +353,44 @@ footer .container {
     margin-bottom: 34px;
 }
 
+/* SUB MENU INTERNO */
+.menu-interno li ul {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+}
+
+.menu-interno li ul li{
+    background-color: #86754d;
+    width: initial;
+    margin: 0;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.menu-interno li:hover ul li{
+    opacity: 1;
+}
+
+.menu-interno li ul li a{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.4em;
+    padding: 3px;
+    display: inline-block;
+}
+
 /* MENU INTERNO BOLOS */
 .casamento-page .menu-interno .casamento-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.anos15-page .menu-interno .anos15-menu-interno {
+    font-family: 'Avenir-Black';
+}
+
+.infantil-page .menu-interno .infantil-menu-interno {
     font-family: 'Avenir-Black';
 }
 
@@ -541,6 +578,8 @@ main .descritivo p {
 }
 
 .bolos-page.casamento-page main:before,
+.bolos-page.anos15 main:before,
+.bolos-page.infantil-page main:before,
 .bolos-page.infantil-feminino-page main:before,
 .bolos-page.infantil-masculino-page main:before,
 .bolos-page.religiosos-page main:before,
