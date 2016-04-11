@@ -1,40 +1,35 @@
 $(document).ready(function () {
 
-
-
     (function ($) {
-        $.fn.fullHeight = function (options) {
-            //    var settings = $.extend({}, options);
-
+        $.fn.fullHeight = function () {
             var obj = this;
             var firstTime = 0;
-            x = $(obj).minHeight;
-            minHeightBase = $(obj).css('min-height').split('px')[0];
+            var minHeightBase = $(obj).css('min-height').split('px')[0];
 
             $(window).resize(function () {
                 if ($(this).height() >= minHeightBase) {
                     $(obj).css('min-height', $(this).height()).parent().css('position', 'initial');
                 } else {
                     $(obj).css('min-height', minHeightBase).parent().css('position', 'relative');
-                };
+                }
             });
 
             if (!firstTime) {
                 $(window).resize();
                 obj.css('opacity', 1);
                 firstTime = 1;
-            };
+            }
         };
     }(jQuery));
 
     $('main .container').fullHeight();
 
-    var accessToken = '47452668.1677ed0.6b14653feb1d4da9849c4f53391aeef1';
-    var username = "carolbuarquecakeboutique";
-    var limit = 7;
-    var setSize = "small";
-
     instagram = function () {
+        var accessToken = '47452668.1677ed0.6b14653feb1d4da9849c4f53391aeef1';
+        var username = "carolbuarquecakeboutique";
+        var limit = 7;
+        var setSize = "small";
+
         return {
             init: function () {
                 instagram.getUser();
@@ -79,16 +74,15 @@ $(document).ready(function () {
         }
     }();
 
-    /* magnificPopup global options */
-    var magnificPopupSettings = {
-        delegate: 'a', // child items selector, by clicking on it popup will open
+    var magnificPopupSettingsIMG = {
+        delegate: 'a',
         type: 'image',
-        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+        mainClass: 'mfp-with-zoom',
         zoom: {
-            enabled: true, // By default it's false, so don't forget to enable it
+            enabled: true,
 
-            duration: 300, // duration of the effect, in milliseconds
-            easing: 'ease-in-out', // CSS transition easing function
+            duration: 300,
+            easing: 'ease-in-out',
             opener: function (openerElement) {
                 return openerElement.is('img') ? openerElement : openerElement.find('img');
             }
@@ -106,14 +100,33 @@ $(document).ready(function () {
         }
     };
 
-    if ($('.lista-interna')) $('.lista-interna').magnificPopup(magnificPopupSettings);
+    var magnificPopupSettingsIFRAME = {
+        delegate: 'a',
+        type: 'iframe',
+        mainClass: 'mfp-with-zoom',
+        zoom: {
+            enabled: true,
 
+            duration: 300,
+            easing: 'ease-in-out',
+            opener: function (openerElement) {
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+        },
+        tClose: 'Fechar (tecla Esc)',
+        tLoading: 'Carregando...',
+        gallery: {
+            enabled: true,
+            tPrev: 'Anterior (tecla ←)',
+            tNext: 'Próximo (tecla ➝)',
+            tCounter: '%curr% de %total%'
+        },
+        image: {
+            tError: '<a href="%url%">A imagem</a> não pôde ser carregada.'
+        }
+    };
 
-    magnificPopupSettings.type = 'iframe';
-
-    if ($('.contato-page .mapa')) $('.contato-page .mapa').magnificPopup(magnificPopupSettings);
-
-    $('.popup').magnificPopup({
+    var magnificPopupSettingsAJAX = {
         type: 'ajax',
         ajax: {
             settings: null, // Ajax settings object that will extend default one - http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
@@ -134,6 +147,10 @@ $(document).ready(function () {
             }
         },
         tClose: 'Fechar (tecla Esc)',
-        tLoading: 'Carregando...',
-    });
+        tLoading: 'Carregando...'
+    };
+
+    if ($('.lista-interna')) $('.lista-interna').magnificPopup(magnificPopupSettingsIMG);
+    if ($('.contato-page .mapa')) $('.contato-page .mapa').magnificPopup(magnificPopupSettingsIFRAME);
+    if ($('.popup') )$('.popup').magnificPopup(magnificPopupSettingsAJAX);
 });
